@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <title>Cinema Application</title>
+    <script type="text/javascript" src="/static/js/movieController.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+</head>
+<body ng-app="CinemaSD">
+
+    <div ng-controller="MovieController">
+        Movie operations:
+        <p>Movie id: <input ng-model="id"/></p>
+        <p>Movie name: <input ng-model="name"/></p>
+        <p>Genre: <input ng-model="genre"/></p>
+        <p>Year: <input ng-model="year"/></p>
+        <p>Rating: <input ng-model="rating"/></p>
+        <p><button ng-click="getAllMovies()">Find movies</button>
+           <button ng-click="createMovie()">Add movie</button>
+            <button ng-click="updateMovie()">Update movie</button>
+            <button ng-click="deleteMovie()">Delete movie</button>
+            <button ng-click="goBackToClientView()">Back</button>
+        </p>
+        <br/>
+        <div class="panel-body" data-ng-init="getAllMovies()">
+            <div ng-bind-html="tab"></div>
+        </div>
+    </div>
+    <p></p><script>{{3 + 5}}</script>
+</body>
+</html>
